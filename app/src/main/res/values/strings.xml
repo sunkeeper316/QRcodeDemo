@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">QRcodeDemo</string>
+
+    <string name="textScanQrCode">Scan QR Code</string>
+    <string name="textGenQrCode">Generate QR Code</string>
+    <string name="textResultNotFound">Result Not Found</string>
+    <string name="textInputSomething">Input something here...</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
