@@ -62,16 +62,16 @@ class GenQRFragment : Fragment() {
         val h = bitMatrix.height
         val pixels = IntArray(w * h)
         // All are 0, or black, by default
-        for (y in 0 until h) {
+        for (y in 0..(h - 1)) {
             val offset = y * w
-            for (x in 0 until w) {
+            for (x in 0..(w - 1)) {
                 pixels[offset + x] = if (bitMatrix.get(x, y)) BLACK else WHITE
             }
         }
 
-        val bitmap = Bitmap.createBitmap( w,h,Bitmap.Config.ARGB_8888)
+        val bitmap = Bitmap.createBitmap(w, h, Bitmap.Config.ARGB_8888)
 
-        bitmap.setPixels(pixels , 0 , w , 0 , 0 , w , h )
+        bitmap.setPixels(pixels, 0, w, 0, 0, w, h)
         return  bitmap
     }
 
