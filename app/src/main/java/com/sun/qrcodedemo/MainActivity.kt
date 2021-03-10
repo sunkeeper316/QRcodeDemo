@@ -18,20 +18,20 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
         bottomNavigationView.setOnNavigationItemSelectedListener{ item ->
-
+            var fragment : Fragment
             when (item.itemId) {
                 R.id.item_ScanQrCode->{
-                    val scanQRFragment = ScanQRFragment()
-                    changeFragment(scanQRFragment)
+                    fragment = ScanQRFragment()
+                    changeFragment(fragment)
                 }
 
                 R.id.item_GenQrCode ->{
-                    val genQRFragment = GenQRFragment()
-                    changeFragment(genQRFragment)
+                    fragment = GenQRFragment()
+                    changeFragment(fragment)
                 }
 
             }
-            false
+            true
         }
         changeFragment(ScanQRFragment())
 
